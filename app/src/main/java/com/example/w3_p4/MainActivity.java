@@ -1,8 +1,10 @@
 package com.example.w3_p4;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String emailStr = email.getText().toString();
                 String pwStr = password.getText().toString();
-                if (emailStr.equals("cs501@bu.edu") && pwStr.equals("1234")){
+                if (emailStr.equals(" ") && pwStr.equals(" ")){
                     Intent intent = new Intent(getApplicationContext(),flashcard.class);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Welcome cs501@bu.edu!", Toast.LENGTH_LONG).show();
@@ -41,5 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onConfigurationChanged (@NonNull Configuration MainActivity) {
+        super.onConfigurationChanged(MainActivity);
     }
 }
