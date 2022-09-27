@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8E8686"
+        tools:context=".flashcard">
+
+
+        <Button
+            android:id="@+id/generateProblems"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="172dp"
+            android:background="#000000"
+            android:backgroundTint="#684343"
+            android:text="Generate 10 Random problems"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firstOperand"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:background="#8E8686"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/secondOperand"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:background="#8E8686"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="99dp"
+            android:layout_height="151dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="4dp"
+            android:background="#8E8686"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="276dp"
+            android:layout_marginEnd="228dp"
+            android:backgroundTint="#684343"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="276dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Type your answer"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

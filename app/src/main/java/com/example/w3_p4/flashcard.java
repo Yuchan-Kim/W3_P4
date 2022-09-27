@@ -74,6 +74,7 @@ public class flashcard extends AppCompatActivity {
                 }
                 score = 0;
                 generator.setEnabled(false);
+                submit.setEnabled(true);
             }
         }); // generator click
 
@@ -94,10 +95,12 @@ public class flashcard extends AppCompatActivity {
                                 score += 1;
                                 String mesg = score + " out of 10";
                                 Toast.makeText(getApplicationContext(), mesg, Toast.LENGTH_LONG).show();
+                                submit.setEnabled(false);
                                 generator.setEnabled(true);
                             }else {
                                 Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_LONG).show();
                                 generator.setEnabled(true);
+                                submit.setEnabled(false);
                             }
                         } else {
                             if ((topNum-downnum) == userAnswer){
@@ -105,9 +108,11 @@ public class flashcard extends AppCompatActivity {
                                 String mesg = score + " out of 10";
                                 Toast.makeText(getApplicationContext(), mesg, Toast.LENGTH_LONG).show();
                                 generator.setEnabled(true);
+                                submit.setEnabled(false);
                             }else {
                                 Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_LONG).show();
                                 generator.setEnabled(true);
+                                submit.setEnabled(false);
                             }
                         }
 

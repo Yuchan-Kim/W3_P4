@@ -43,9 +43,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (savedInstanceState != null){
+            String emailStr = email.getText().toString();
+            String pwStr = password.getText().toString();
+
+        }
     }
 
-    public void onConfigurationChanged (@NonNull Configuration MainActivity) {
-        super.onConfigurationChanged(MainActivity);
+    @Override
+    public void onSaveInstanceState (Bundle outState) {
+
+        super.onSaveInstanceState(outState);
+
     }
 }
