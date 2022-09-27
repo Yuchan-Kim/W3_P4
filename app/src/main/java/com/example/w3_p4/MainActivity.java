@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String emailStr = email.getText().toString();
                 String pwStr = password.getText().toString();
-                if (emailStr.equals(" ") && pwStr.equals(" ")){
+                if (emailStr.equals("cs501@bu.edu") && pwStr.equals("1234")){
                     Intent intent = new Intent(getApplicationContext(),flashcard.class);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Welcome cs501@bu.edu!", Toast.LENGTH_LONG).show();

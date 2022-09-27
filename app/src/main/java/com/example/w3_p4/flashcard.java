@@ -240,6 +240,8 @@ public class flashcard extends AppCompatActivity {
         savedInstanceState.putString("downSaved",downVal.getText().toString());
         savedInstanceState.putInt("scoreSaved",score);
 
+
+
         if (isEmpty(additions,subtractions) && topVal.getText().toString().equals("")){
             submit.setEnabled(false);
             generator.setEnabled(true);
@@ -263,10 +265,17 @@ public class flashcard extends AppCompatActivity {
         String topSaved = savedInstanceState.getString("topSaved");
         String downSaved = savedInstanceState.getString("downSaved");
 
+
+
+
+
         op.setText(opSaved);
         topVal.setText(topSaved);
         downVal.setText(downSaved);
         score = scoreSaved;
+
+
+
 
         if (isEmpty(additions,subtractions) && topVal.getText().toString().equals("")){
             submit.setEnabled(false);
