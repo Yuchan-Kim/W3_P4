@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,8 @@ public class flashcard extends AppCompatActivity {
     int topNum = 0;
     int downNum = 0;
     int score = 0;
-
+    Integer[] additions = new Integer[10];
+    Integer[] subtractions = new Integer[10];
 
     Random random = new Random();
     @Override
@@ -37,8 +39,7 @@ public class flashcard extends AppCompatActivity {
 
         answer = (EditText) findViewById(R.id.answer);
 
-        Integer[] additions = new Integer[10];
-        Integer[] subtractions = new Integer[10];
+
 
 
         generator = (Button) findViewById(R.id.generateProblems);
@@ -195,6 +196,9 @@ public class flashcard extends AppCompatActivity {
 
     } // onCreate
 
+
+
+
     public boolean flip(){
         int flip = random.nextInt(2);
         return flip == 0;
@@ -230,8 +234,50 @@ public class flashcard extends AppCompatActivity {
         return true;
     }
 
-    public void onConfigurationChanged (@NonNull Configuration flashcard) {
-        super.onConfigurationChanged(flashcard);
+    public void onSaveInstanceState (@NonNull Bundle savedInstanceState){
+        savedInstanceState.putString("opSaved",op.getText().toString());
+        savedInstanceState.putString("topSaved",topVal.getText().toString());
+        savedInstanceState.putString("downSaved",downVal.getText().toString());
+        savedInstanceState.putInt("scoreSaved",score);
+
+        if (isEmpty(additions,subtractions) && topVal.getText().toString().equals("")){
+            submit.setEnabled(false);
+            generator.setEnabled(true);
+        }else {
+            submit.setEnabled(true);
+            generator.setEnabled(false);
+        }
+
+
+        super.onSaveInstanceState(savedInstanceState);
+
+
     }
+
+    @Override
+    public void onRestoreInstanceState (Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+
+        int scoreSaved = savedInstanceState.getInt("scoreSaved");
+        String opSaved = savedInstanceState.getString("opSaved");
+        String topSaved = savedInstanceState.getString("topSaved");
+        String downSaved = savedInstanceState.getString("downSaved");
+
+        op.setText(opSaved);
+        topVal.setText(topSaved);
+        downVal.setText(downSaved);
+        score = scoreSaved;
+
+        if (isEmpty(additions,subtractions) && topVal.getText().toString().equals("")){
+            submit.setEnabled(false);
+            generator.setEnabled(true);
+        }else {
+            submit.setEnabled(true);
+            generator.setEnabled(false);
+        }
+
+
+
+        }
 
 }

@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_marginTop="420dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="#684343"
             android:text="Submit"
             android:textColor="#FFFFFF"
@@ -76,17 +76,18 @@
             android:id="@+id/answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="420dp"
+            android:layout_marginEnd="30dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Type your answer"
             android:inputType="number"
             android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintEnd_toStartOf="@+id/submit"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

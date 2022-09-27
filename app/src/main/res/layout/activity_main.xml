@@ -11,25 +11,33 @@
         android:id="@+id/loginLabel"
         android:layout_width="342dp"
         android:layout_height="106dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
         android:background="#8E8686"
         android:gravity="center"
-        android:text="SIMPLE LOGIN"
+        android:text=" LOGIN"
+
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/emailLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
 
     <Button
         android:id="@+id/loginBT"
         android:layout_width="333dp"
         android:layout_height="53dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="400dp"
+        android:background="#000000"
+        android:backgroundTint="#684343"
         android:text="login"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,53 +46,61 @@
         android:id="@+id/emailAddress"
         android:layout_width="344dp"
         android:layout_height="47dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/pwLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/emailLabel" />
 
     <EditText
         android:id="@+id/passWord"
         android:layout_width="344dp"
         android:layout_height="47dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/loginBT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <TextView
         android:id="@+id/emailLabel"
         android:layout_width="247dp"
         android:layout_height="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="8dp"
         android:background="#8E8686"
         android:gravity="center|left"
         android:text="Email"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/emailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/pwLabel"
         android:layout_width="247dp"
         android:layout_height="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="76dp"
         android:background="#8E8686"
         android:gravity="center|left"
         android:text="Password"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="@id/emailAddress" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
